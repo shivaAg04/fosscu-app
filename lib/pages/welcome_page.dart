@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:lottie/lottie.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -16,6 +13,11 @@ class _WelcomePageState extends State<WelcomePage> {
     "https://assets8.lottiefiles.com/packages/lf20_dt0twxk1.json",
     "https://assets10.lottiefiles.com/packages/lf20_jk0figsg.json",
     "https://assets9.lottiefiles.com/packages/lf20_58jr5g6l.json"
+  ];
+  List text = [
+    "Welcome to Free and Open Source Organization",
+    "A True Place to Get Knowledge of Open-Source Culture",
+    "Begin Your Path to the Great World Of Open-Source"
   ];
   @override
   Widget build(BuildContext context) {
@@ -34,14 +36,18 @@ class _WelcomePageState extends State<WelcomePage> {
                     Lottie.network(
                       images[0],
                       repeat: true,
-                      height: 200,
-                      width: 200,
+                      height: 300,
+                      width: 300,
                     ),
+                    Column(
+                      children: [Text(text[index])],
+                    )
                   ],
                 ),
               ),
             );
           })),
+      backgroundColor: Colors.green.shade300,
     );
   }
 }
