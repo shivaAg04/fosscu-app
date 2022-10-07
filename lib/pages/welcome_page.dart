@@ -32,7 +32,7 @@ class _WelcomePageState extends State<WelcomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Lottie.network(
-                      images[index],
+                      images[0],
                       repeat: true,
                       height: 200,
                       width: 200,
